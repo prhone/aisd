@@ -9,7 +9,13 @@ main() {
 	do {
 	int k;
 	cout<<"Drogi uzytkowniku, jestem programem, ktory wyswietla liczby dwucyfrowe nie wieksze od k"<<endl;
+	cout<<"Podaj liczbe dwucyfrowa"<<endl;
 	cin>>k;
+	do {
+		cout<<"Nie probuj mnie oszukac i podaj liczbe dwucyfrowa"<<endl;
+		cin>>k;
+	}
+	while (k<=9 || k>=100);
 	int i = 10;
 	cout<<"Twoje liczby w kolejnosci rosnacej to: "<<endl;
 	while (i <= k) {
