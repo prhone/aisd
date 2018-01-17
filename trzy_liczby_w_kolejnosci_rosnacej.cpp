@@ -15,23 +15,38 @@ main () {
 	cin>>a;
 	cin>>b;
 	cin>>c;
-	if (a<b) {
-		if (b>c) {
-			cout<<"Twoje liczby w porzadku rosnacym to: "<<c<<" "<<a<<" "<<b<<endl;
+	if (a>b) {
+		if (a>c) {
+			if (b>c) {
+			cout<<"Twoje liczby w porzadku rosnacym to: "<<c<<" "<<b<<" "<<a<<endl;
+			}
+			else {
+			cout<<"Twoje liczby w porzadku rosnacym to: "<<b<<" "<<c<<" "<<a<<endl;
+			}
 		}
-		else {
-			cout<<"Twoje liczby w porzadku rosnacym to: "<<a<<" "<<b<<" "<<c<<endl;
+			else {
+			if (b>c) {
+				cout<<"Twoje liczby w porzadku rosnacym to: "<<c<<" "<<b<<" "<<a<<endl;
+			}
+			else {
+				cout<<"Twoje liczby w porzadku rosnacym to: "<<b<<" "<<a<<" "<<c<<endl;
+			}
 		}
 	}
 	else {
-		if (b>c) {
-			cout<<"Twoje liczby w porzadku rosnacym to: "<<c<<" "<<b<<" "<<a<<endl;
-		}
+		if (a>c) {
+			cout<<"Twoje liczby w porzadku rosnacym to: "<<c<<" "<<a<<" "<<b<<endl;
+			}
 		else {
-			cout<<"Twoje liczby w porzadku rosnacym to: "<<b<<" "<<c<<" "<<a<<endl;
+			if (b>c) {
+			cout<<"Twoje liczby w porzadku rosnacym to: "<<a<<" "<<c<<" "<<b<<endl;
+			}
+			else {
+			cout<<"Twoje liczby w porzadku rosnacym to: "<<a<<" "<<b<<" "<<c<<endl;
+			}
 		}
 	}
-	cout<<"Czy chcesz kontynuowac?"<<endl;
+	cout<<"Czy chcesz kontynuowac? [T/N]"<<endl;
 	cin>>znak;
 	}
 	while (znak=='T' || znak=='t');

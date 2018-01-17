@@ -2,7 +2,7 @@
 #include <cstdlib>
 using namespace std;
 
-/* Program oblicza tygodniowy i roczny zarobek pracownika na podstawie liczby przepracowanych godzin, a takze sprawdza w ktorym progi podatkowym miesci sie
+/* Program oblicza tygodniowy i roczny zarobek pracownika na podstawie liczby przepracowanych godzin, a takze sprawdza w ktorym progu podatkowym miesci sie
 jego roczny zarobek i oblicza skladke podatkowa */
 
 int main() {
@@ -15,8 +15,20 @@ int main() {
 	cout<<"Czesc uzytkowniku! Jestem programem, ktory oblicza tygodniowy i roczny zarobek pracownika na podstawie przepracowanych godzin, a takze sprawdzam w ktorym progu podatkowym miesci sie Twoj roczny zarobek, ile wynosi podatek i podaje Twoj roczny zarobek po odjeciu podatku"<<endl;
 	cout<<"Drogi uzytkowniku, podaj mi Twoje podstawowe wynagrodzenie za godzine brutto"<<endl;
 	cin>>sg;
+	do {
+		cout<<"Drogi przybyszu z innej planety, w naszej czasoprzestrzeni nie mozna zarabiac mniej niz 0 zl"<<endl;
+		cout<<"Podaj mi swoje wynagrodzenie brutto"<<endl;
+		cin>>sg;
+	}
+	while (sg<0);
 	cout<<"A teraz podaj mi liczbe przepracowanych godzin tygodniowo"<<endl;
 	cin>>lg;
+	do {
+		cout<<"Drogi przybyszu z innej planety, w naszej czasoprzestrzeni nie mozna pracowac mniej niz 0 godzin"<<endl;
+		cout<<"Podaj mi liczbe przepracowanych godzin tygodniowo"<<endl;
+		cin>>lg;
+	}
+	while (lg<0);
 	//zarobek_bez_ng - zarobek bez wynagrodzenia dodatkowego
 	float zarobek_bez_ng = lg*sg;
 	//ng - wynagrodzenie dodatkowe
@@ -63,6 +75,6 @@ int main() {
 		
 	}
 
-	return 0;ssd
+	return 0;
 	}
 	

@@ -9,9 +9,9 @@ napis "dodatnia". Jesli liczba bedzie zerem wyswietli "zero", a jesli liczba bed
 int main() {
 	
 	char znak;
+	cout<<"Czesc uzytkowniku! Jestem programem, ktory sprawdza czy liczba, ktora mi podasz jest liczba dodatnia, ujemna czy rowna zero."<<endl;
 	do {
 		int liczba = 0;
-		cout<<"Czesc uzytkowniku! Jestem programem, ktory sprawdza czy liczba, ktora mi podasz jest liczba dodatnia, ujemna czy rowna zero."<<endl;
 		cout<<"Moj drogi uzytkowniku, podaj mi liczbe calkowita"<<endl;
 		cin>>liczba;
 		if (liczba >= 0) {
@@ -25,7 +25,7 @@ int main() {
 		else {
 			cout<<"ujemna"<<endl;
 		}
-	cout<<"Czy chcesz kontynuowac?"<<endl;
+	cout<<"Czy chcesz kontynuowac? [T/N]"<<endl;
 	cin>>znak;
 	}
 	while (znak=='T' || znak=='t');
