@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <time.h>
 #include <math.h>
+#include <sstream>
 using namespace std;
 
 string PL( const char * text )
@@ -142,8 +143,29 @@ main() {
 		for(e=j; e>0; e--){
 			cout<<e<<PL(" elment Twojej tablicy to: ")<<tablica[e-1]<<endl;
 			int liczba_do_3=tablica[e-1];
-			/* funkcja pow(liczba,potêga z biblioteki <math.h> */
+			/* funkcja pow(liczba,potêga) z biblioteki <math.h> */
 			cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" do potêgi 3ciej to: ")<<pow(liczba_do_3, 3)<<endl;
+			cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" + 1 to: ")<<tablica[e-1]+1<<endl;
+			cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" razy 2: ")<<(tablica[e-1])*2<<endl;
+			if(tablica[e-1]%2==0) {
+				cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" jest parzysta.")<<endl;
+				cout<<PL("i dodajê do niej 100: ")<<tablica[e-1]+100<<endl;
+			}
+			else {
+				cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" jest nieparzysta.")<<endl;
+			}
+			if(4<=tablica[e-1] && tablica[e-1]<35) {
+				cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" nale¿y do przedzia³u <4:35).")<<endl;
+			}
+			else {
+				cout<<PL("Liczba: ")<<tablica[e-1]<<PL(" nie nale¿y do przedzia³u <4:35).")<<endl;
+			}
+			cout<<"\n";
+			/* korzystam z biblioteki <sstream> */
+			ostringstream ss;
+			ss << tablica[e-1];
+			string str = ss.str();
+			cout<<"to jest string liczba: "<<str<<endl;
 		}
 	}
 	while(j==0);
