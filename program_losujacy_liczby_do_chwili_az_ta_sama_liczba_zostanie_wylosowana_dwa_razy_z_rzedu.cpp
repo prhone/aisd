@@ -38,8 +38,8 @@ string PL( const char * text )
 main(){
 	
 	char znak;
-	int a;
-	int b;
+	int a=0;
+	int b=0;
 	
 	cout<<PL("Drogi u¿ytkowniku, jestem programem, który losuje liczby do chwili kiedy zostanie wylosowana dwa razy z rzêdu ta sama liczba")<<endl;
 	
@@ -48,29 +48,28 @@ main(){
 		cin>>a;
 		cout<<PL("Podaj liczbê (b) do której mam losowaæ:")<<endl;
 		cin>>b;
-		if(a>b) {
-		do{
+		
+		while (a>b){
 			cout<<PL("Liczba b nie mo¿e byæ mniejsza od a")<<endl;
 			cout<<PL("WprowadŸ liczbê b jeszcze raz:")<<endl;
 			cin>>b;
 		}
-		while(a>b);
-		}
-		else{
 		
 		srand(time(0));
 		
-		int i;
+		int i=0;
 		int * tablica = new int[i];
 		
 		int zakres_a_b=b-a+1;
 		int liczba;
+		int liczba_losowan;
 		
 		do {
 			tablica[i]=a+rand()%zakres_a_b;
 			cout<<tablica[i]<<endl;
 			if(tablica[i]==tablica[i-1]) {
 				cout<<PL("Liczba jaka zosta³a wylosowana dwa razy z rzêdu to: ")<<tablica[i]<<endl;
+				liczba_losowan=i+1;
 				cout<<PL("Liczba losowañ to: ")<<i+1<<endl;
 				liczba=1;
 			}
@@ -83,7 +82,7 @@ main(){
 		} while(liczba!=1);
 		
 		
-		}
+	
 				
 		cout<<PL("Czy chcesz losowaæ jeszcze raz? [T/N]")<<endl;
 		cin>>znak;
